@@ -11,21 +11,18 @@ TaxReport.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
+        year: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
-        description: {
-            type: DataTypes.STRING,
+        income: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
         },
         date_created: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW,
-        },
-        needed_funding: {
-            type: DataTypes.FLOAT,
-            allowNull: false,
         },
         user_id: {
             type: DataTypes.INTEGER,

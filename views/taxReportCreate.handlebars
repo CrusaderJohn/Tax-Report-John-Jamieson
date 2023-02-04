@@ -1,0 +1,57 @@
+<div class="row align-items-md-stretch">
+    <div class="col-md-6">
+        <h4 class="mb-3">Fill in the information to get a tax report!</h4>
+        <form class="needs-validation" id="taxInput" novalidate="">
+            <div class="row g-3">
+
+                <div class="col-12">
+                    <label for="yearInput" class="form-label">Year</label>
+                    <select class="form-select" id="yearInput" required="">
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid year.
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label for="incomeInput" class="form-label">Income</label>
+                    <input type="number" class="form-control" id="incomeInput" placeholder="85000" min="0" max="1000000000">
+                    <div class="invalid-feedback">
+                        Please enter positive number.
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                {{#if logged_in}}
+                <button class="w-100 btn btn-warning btn-lg" type="submit">Save</button>
+                {{/if}}
+                <button class="w-100 btn btn-danger btn-lg" type="reset">Clear</button>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-md-6 results">
+        <h4 class="mb-3">Your tax report!</h4>
+        <div class="shadow-lg p-4 mb-4 bg-white rounded-3">
+            <table class="table table-striped table-dark">
+                <tbody>
+                <tr>
+                    <th scope="row">Year:</th>
+                    <td class="yearOutput"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Income:</th>
+                    <td id="fedTaxOutput"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="./js/taxReport.js"></script>

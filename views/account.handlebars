@@ -1,3 +1,20 @@
+<h2>Welcome, {{name}}!</h2>
 
+{{#if taxReports.length}}
+    <div class="col-md-6 project-list">
+        <h3>Current Projects:</h3>
+
+        {{#each taxReports as |taxReport|}}
+            <div class="row mb-2">
+                <div class="col-md-8">
+                    <h4><a href="/project/{{taxReport.id}}">{{taxReport.year}}</a></h4>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-sm btn-danger" data-id="{{taxReport.id}}">DELETE</button>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{/if}}
 
 <script src="./js/account.js"></script>
