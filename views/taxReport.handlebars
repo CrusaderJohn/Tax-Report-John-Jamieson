@@ -1,0 +1,64 @@
+<div class="row align-items-md-stretch">
+    <div class="col-md-6">
+        <h4 class="mb-3">Fill in the information to get a tax report!</h4>
+        <form class="needs-validation" novalidate="">
+            <div class="row g-3">
+
+                <div class="col-12">
+                    <label for="year" class="form-label">Year</label>
+                    <select class="form-select" id="year" required="">
+                        <option value=2022>2022</option>
+                        <option value=2021>2021</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid year.
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label for="income" class="form-label">Income</label>
+                    <input type="number" class="form-control" id="income" placeholder="85000" min="0" max="1000000000">
+                    <div class="invalid-feedback">
+                        Please enter positive number.
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <button class="w-100 btn btn-warning btn-lg" type="submit">Save</button>
+                <button class="w-100 btn btn-danger btn-lg" type="reset">Clear</button>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-md-6">
+        <h4 class="mb-3">Your tax report!</h4>
+        <form class="needs-validation" novalidate="">
+            <div class="row g-3">
+
+                <div class="col-12">
+                    <label for="year" class="form-label">Year</label>
+                    <select class="form-select" id="year" required="">
+                        <option value=2022>2022</option>
+                        <option value=2021>2021</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid year.
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label for="income" class="form-label">Income</label>
+                    <input type="number" class="form-control" id="income" placeholder="85000" min="0" max="1000000000" readonly>
+                    <div class="invalid-feedback">
+                        Please enter positive number.
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-4">
+        </form>
+    </div>
+</div>
