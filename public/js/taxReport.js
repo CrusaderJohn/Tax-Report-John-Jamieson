@@ -64,7 +64,7 @@ const save = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/taxReport');
+            document.location.replace('/account');
         } else {
             alert('Failed to create tax report');
         }

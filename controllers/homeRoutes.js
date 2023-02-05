@@ -37,20 +37,22 @@ router.get('/taxReportNew', async (request, response) => {
     }
 });
 
-// Use withAuth middleware to prevent access to route
-router.get('/taxReport', withAuth, async (request, response) => {
+router.get('/taxReport/:id', withAuth, async (request, response) => {
     try {
-        // Find the logged in user based on the session ID
-        const userData = await User.findByPk(request.session.user_id, {
-            attributes: { exclude: ['password'] },
-            include: [{ model: TaxReport }],
+        const taxReportData = await TaxReport.findByPk(request.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+            ],
         });
 
-        const user = userData.get({ plain: true });
+        const taxReport = taxReportData.get({ plain: true });
 
         response.render('taxReport', {
-            ...user,
-            logged_in: true
+            ...taxReport,
+            logged_in: request.session.logged_in
         });
     } catch (error) {
         response.status(500).json(error);
