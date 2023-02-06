@@ -2,8 +2,8 @@ const loginFormHandler = async (event) => {
     event.preventDefault();
 
     // Collect values from the login form
-    const email = $('#floatingEmail').val();
-    const password = $('#floatingPassword').val();
+    const email = $('#loginEmail').val();
+    const password = $('#loginPassword').val();
 
     if (email && password) {
         // Send a POST request to the API endpoint
@@ -25,9 +25,9 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
-    const name = $('#floatingName').val();
-    const email = $('#floatingEmail').val();
-    const password = $('#floatingPassword').val();
+    const name = $('#signupName').val();
+    const email = $('#signupEmail').val();
+    const password = $('#signupPassword').val();
 
     if (name && email && password) {
         const response = await fetch('/api/users', {
