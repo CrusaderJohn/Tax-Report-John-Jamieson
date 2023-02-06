@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@equisoft/tax-ca": "^2021.8.0",
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
@@ -23,7 +24,10 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "tax-2021": "npm:@equisoft/tax-ca@^2021.8.0",
+    "tax-2022": "npm:@equisoft/tax-ca@^2022.13.0",
+    "tax-2023": "npm:@equisoft/tax-ca@^2023.2.0"
   },
   "bugs": {
     "url": "https://github.com/CrusaderJohn/Tax-Report-John-Jamieson/issues"

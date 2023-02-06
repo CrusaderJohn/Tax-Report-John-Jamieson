@@ -37,10 +37,26 @@ const update = async (event) => {
     const year = Number($('#yearInput').val().trim());
     const income = Number($('#incomeInput').val().trim());
 
-    const fedIncomeTax = fedTax(year, income);
+    if (year && income) {
+        const response = await fetch(`/api/taxReports/update`, {
+            method: 'POST',
+            body: JSON.stringify({year, income}),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
 
-    $('.yearOutput').text(year);
-    $('#fedTaxOutput').text(fedIncomeTax);
+        if (response.ok) {
+            const data = await response.json();
+
+            $('.yearOutput').text(data.year);
+            $('#fedTaxOutput').text(data.fedTax);
+
+        } else {
+            alert('Failed to create project');
+        }
+    }
+
 };
 
 const save = async (event) => {
@@ -71,5 +87,5 @@ const save = async (event) => {
     }
 };
 
-$("#taxInput").change(update);
-$('#taxInput').submit(save);
+$("#update").on("click",update);
+$("#save").on("click", $('#taxInput').submit(save));

@@ -14,6 +14,7 @@ Website that can generate simple tax reports. A great foundation for expansion i
 
 ## Technologies Used
 
+- [tax-ca](https://www.npmjs.com/package/@equisoft/tax-ca)
 - Bootstrap 5.1.3
 - jQuery 3.6.1
 - Node.js
@@ -33,6 +34,9 @@ Website that can generate simple tax reports. A great foundation for expansion i
 - express-session 1.17.1
 - mysql2 2.2.5
 - sequelize 6.3.5
+- @equisoft/tax-ca 2021.8.0
+- @equisoft/tax-ca 2022.13.0
+- @equisoft/tax-ca 2023.2.0
 
 ## Installation
 
