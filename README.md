@@ -8,10 +8,6 @@ Website that can generate simple tax reports. A great foundation for expansion i
 
 [Deployed Application](https://salty-headland-78131.herokuapp.com/)
 
-## Screenshot
-
-![Demo Screenshot](screenshot.png)
-
 ## Technologies Used
 
 - [tax-ca](https://www.npmjs.com/package/@equisoft/tax-ca)
@@ -45,3 +41,8 @@ Website that can generate simple tax reports. A great foundation for expansion i
 3. Add .env file with database details
 4. Use "npm run seed" in the terminal
 5. Use "npm start" in the terminal
+
+## Screenshot
+
+![Demo Screenshot 01](Screenshot01.png)
+![Demo Screenshot 02](Screenshot02.png)
