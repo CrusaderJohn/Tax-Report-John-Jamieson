@@ -32,11 +32,6 @@ const save = async (event) => {
     const year = Number($('#yearInput').val().trim());
     const income = Number($('#incomeInput').val().trim());
 
-    const fedIncomeTax = fedTax(year, income);
-
-    $('.yearOutput').text(year);
-    $('#fedTaxOutput').text(Math.round(fedIncomeTax));
-
     if (year && income) {
         const response = await fetch(`/api/taxReports`, {
             method: 'POST',
