@@ -55,4 +55,4 @@ const save = async (event) => {
 };
 
 $("#update").on("click",update);
-$('#taxInput').submit(save);
+$("#save").on("click",save);
